@@ -20,6 +20,6 @@ async def process_thought(input_data: ThoughtInput):
             api_key=OPENAI_API_KEY
         )
 
-        return {"organized_thought": response["choices"][0]["message"]["content"]}
+    return {"organized_thought": response["choices"][0]["message"]["content"]}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
